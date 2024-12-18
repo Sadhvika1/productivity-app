@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Productivity Dashboard</h1>
+
+        <!-- To-Do List -->
+        <section id="todo-section">
+            <h2>To-Do List</h2>
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Progress Tracker -->
+        <section id="progress-section">
+            <h2>Progress Tracker</h2>
+            <p>Tasks Completed: <span id="progress">0</span></p>
+        </section>
+
+        <!-- Reminders -->
+        <section id="reminder-section">
+            <h2>Reminders</h2>
+            <input type="text" id="reminderTitle" placeholder="Reminder title">
+            <input type="datetime-local" id="reminderTime">
+            <button onclick="addReminder()">Set Reminder</button>
+            <ul id="reminderList"></ul>
+        </section>
+
+        <!-- Notes -->
+        <section id="notes-section">
+            <h2>Notes</h2>
+            <textarea id="notesArea" rows="5" placeholder="Write your notes here..."></textarea>
+            <button onclick="saveNotes()">Save Notes</button>
+        </section>
+
+        <!-- Calendar -->
+        <section id="calendar-section">
+            <h2>Calendar</h2>
+            <input type="date" id="eventDate">
+            <input type="text" id="eventTitle" placeholder="Event title">
+            <button onclick="addEvent()">Add Event</button>
+            <div id="eventCalendar">
+                <h3>Upcoming Events</h3>
+                <ul id="eventList"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
